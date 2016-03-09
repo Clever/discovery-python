@@ -1,0 +1,4 @@
+[pep8]
+ignore = E111
+exclude = ./.eggs
+max-line-length = 100
