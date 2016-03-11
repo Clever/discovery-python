@@ -69,3 +69,16 @@ SERVICE_REDIS_TCP_PROTO = "tcp"
 SERVICE_REDIS_TCP_HOST = "localhost"
 SERVICE_REDIS_TCP_PORT = "6379"
 ```
+
+## Development
+
+### Publishing a new version
+
+1. Bump the version in the `VERSION` file and update the changelog in `CHANGES.md`.
+2. Merge your changes into `master`.
+3. Checkout `master`
+4. Run the publish script:
+
+    ```sh
+    ./publish.sh
+    ```
