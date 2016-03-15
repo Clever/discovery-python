@@ -42,13 +42,13 @@ The Github token can be found in [dev-passwords](https://github.com/Clever/cleve
 import discovery
 
 try:
-	redis_url = discovery.url('stoked', 'thrift')
+	stoked_url = discovery.url('stoked', 'thrift')
 
-	redis_host_and_port = discovery.host_port('stoked', 'thrift')
+	stoked_host_and_port = discovery.host_port('stoked', 'thrift')
 
-	redis_host = discovery.host('stoked', 'thrift')
+	stoked_host = discovery.host('stoked', 'thrift')
 
-	redis_port = discovery.port('stoked', 'thrift')
+	stoked_port = discovery.port('stoked', 'thrift')
 
 except discovery.MissingEnvironmentVariableError as e:
 	print 'ERROR: Stoked discovery failed: {}.'.format(e)
@@ -65,9 +65,9 @@ SERVICE_{SERVICE_NAME}_{EXPOSE}_{PROTO|HOST|PORT}
 
 ### Example:
 ```bash
-SERVICE_REDIS_TCP_PROTO = "tcp"
-SERVICE_REDIS_TCP_HOST = "localhost"
-SERVICE_REDIS_TCP_PORT = "6379"
+SERVICE_STOKED_THRIFT_PROTO = "tcp"
+SERVICE_STOKED_THRIFT_HOST = "localhost"
+SERVICE_STOKED_THRIFT_PORT = "90"
 ```
 
 ## Development
