@@ -8,16 +8,18 @@ This library currently is just an abstraction around reading environment variabl
 
 ### pip
 
-```sh
-pip install git+https://<clever-drone Github token>@github.com/Clever/discovery-python.git@<version_tag>
-```
+Assuming discovery v0.1.0 is being installed:
 
-The Github token can be found in [dev-passwords](https://github.com/Clever/clever-ops/tree/master/credentials).
+```sh
+pip install git+ssh://github.com/Clever/discovery-python.git@v0.1.0
+```
 
 ### setup.py
 
 ```python
 from setuptools import setup
+
+GITHUB_TOKEN = os.environ['GITHUB_API_TOKEN']
 
 # Assuming discovery v0.1.0 is being installed:
 setup(
@@ -26,15 +28,13 @@ setup(
 
     install_requires=['discovery==0.1.0'],
     dependency_links=[
-      'https://<clever-drone Github token>@github.com/Clever/discovery-python/tarball/v0.1.0#egg=discovery-0.1.0'
+      'https://{}@github.com/Clever/discovery-python/tarball/v0.1.0#egg=discovery-0.1.0'.format(GITHUB_TOKEN)
     ],
 
     # ...
 
 )
 ```
-
-The Github token can be found in [dev-passwords](https://github.com/Clever/clever-ops/tree/master/credentials).
 
 ## Usage
 
