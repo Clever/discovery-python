@@ -2,6 +2,8 @@
 
 This library programmatically finds endpoints for dependencies. Similar to [discovery-go](https://github.com/Clever/discovery-go) and [disocvery-node](https://github.com/Clever/discovery-node).
 
+See [Service Discovery](https://github.com/Clever/infra-docs/blob/master/deploy/service_discovery.md) for more details.
+
 ## Installation
 
 ### pip
