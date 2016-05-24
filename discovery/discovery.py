@@ -1,4 +1,4 @@
-import logger
+import kayvee.logger as logger
 import os
 
 
