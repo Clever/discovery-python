@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from builtins import str
 import os
 import sys
 from setuptools import setup, find_packages
@@ -14,9 +15,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'VERSION')) as f:
   VERSION = f.read().strip()
 
-pr_kwargs = {}
-if pkg_resources.get_distribution("pip").version >= '6.0':
-  pr_kwargs = {"session": False}
+pr_kwargs = {"session": False}
 
 install_reqs = parse_requirements(
     os.path.join(
@@ -31,7 +30,7 @@ setup(
     author_email='tech-notify@clever.com',
     url='https://github.com/Clever/discovery-python/',
     packages=['discovery'],
-    install_requires=[str(ir.req) for ir in install_reqs],
+    install_requires=[str(ir.requirement) for ir in install_reqs],
     setup_requires=['nose>=1.0'],
     test_suite='nose.collector',
     long_description="""\
