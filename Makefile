@@ -7,7 +7,7 @@ clean:
 	find -type f -name '*.pyc' -delete
 
 deps:
-	python setup.py develop
+	python3 setup.py develop
 
 format:
 	autopep8 -i -r -j0 -a --experimental --max-line-length 100 --indent-size 2 .
@@ -19,4 +19,4 @@ publish:
 	./publish.sh
 
 test: deps
-	nosetests ./test
+	python3 -m "nose" test

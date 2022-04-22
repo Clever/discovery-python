@@ -1,3 +1,5 @@
+## 1.0.0 (2022-04-21)
+- Update to Python 3
 ## 0.1.1 (2016-05-24)
 - Update to be compatible with the latest version of kayvee
 
