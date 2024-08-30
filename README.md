@@ -48,6 +48,8 @@ try:
 
 	stoked_port = discovery.port('stoked', 'thrift')
 
+  clever_com_url = discovery.external_url('clever.com')
+
 except discovery.MissingEnvironmentVariableError as e:
 	print 'ERROR: Stoked discovery failed: {}.'.format(e)
 
