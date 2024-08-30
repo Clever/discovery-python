@@ -75,3 +75,15 @@ class TestDiscovery(unittest.TestCase):
 
     with self.assertRaisesRegexp(MissingEnvironmentVariableError, 'SERVICE_PROTO_MISSING_TCP_HOST'):
       discovery.url('proto-missing', 'tcp')
+
+  def test_external_url(self):
+    url = 'https://clever.com:443'
+    os.environ['EXTERNAL_URL_CLEVER_COM'] = url
+
+    self.assertEqual(discovery.external_url("clever.com"), url)
+
+  def test_external_complex_url(self):
+    url = 'https://api.clever.com:443'
+    os.environ['EXTERNAL_URL_API_CLEVER_COM'] = url
+
+    self.assertEqual(discovery.external_url("api.clever.com"), url)
