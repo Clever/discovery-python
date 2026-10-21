@@ -3,9 +3,9 @@ kind: Component
 metadata:
   name: discovery-python
   description: Programmatically find service endpoints (i.e. discovery-go for python)
-  owner: unknown
+  owner: eng-infra
 spec:
   type: unknown
   lifecycle: production
-  owner: unknown
+  owner: eng-infra
   system: Clever
